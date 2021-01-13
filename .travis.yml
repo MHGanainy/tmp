@@ -6,4 +6,5 @@ services:
 
 script:
   - docker build -t 571998/3ds-server ./3ds-dockerfile
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push 571998/3ds-server
