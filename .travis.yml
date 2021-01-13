@@ -1,0 +1,9 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+script:
+  - docker build -t 571998/3ds-server ./3ds-dockerfile
+  - docker push 571998/3ds-server
